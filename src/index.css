@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@keyframes audioWave {
+  0%, 100% {
+    height: 15%;
+    opacity: 0.5;
+  }
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes progressGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.audio-bar-anim {
+  animation: audioWave 1.2s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+.progress-glow-bar {
+  background: linear-gradient(90deg, #0F4C5C, #0F766E, #10B981, #0F4C5C);
+  background-size: 200% 200%;
+  animation: progressGlow 3s ease infinite;
+}
